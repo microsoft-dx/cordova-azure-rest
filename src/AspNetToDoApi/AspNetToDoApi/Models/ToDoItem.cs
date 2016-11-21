@@ -1,30 +1,40 @@
-﻿namespace AspNetToDoApi.Models
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AspNetToDoApi.Models
 {
     public class ToDoItem
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Notes { get; set; }
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
+
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
+        [JsonProperty("address")]
+        public string Address { get; set; }
+
+        [JsonProperty("done")]
         public bool Done { get; set; }
 
         public ToDoItem()
         {
         }
 
-        public ToDoItem(int id, string name, string notes, bool done)
+        public ToDoItem(string name, string address, bool done)
         {
-            Id = id;
-            Name = name;
-            Notes = notes;
+            Id = Guid.NewGuid();
+            Text = name;
+            Address = address;
             Done = done;
         }
 
-        public void UpdateToDo(ToDoItem toDo)
+        public void UpdateToDo(ToDoItem item)
         {
-            Id = toDo.Id;
-            Name = toDo.Name;
-            Notes = toDo.Notes;
-            Done = toDo.Done;
+            Id = item.Id;
+            Text = item.Text;
+            Address = item.Address;
+            Done = item.Done;
         }
     }
 }

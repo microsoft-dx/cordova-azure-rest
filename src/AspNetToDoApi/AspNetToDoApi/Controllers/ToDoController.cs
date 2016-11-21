@@ -1,4 +1,5 @@
 ﻿using AspNetToDoApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -9,33 +10,36 @@ namespace AspNetToDoApi.Controllers
         private static ToDoRepository _toDoRepository = new ToDoRepository();
         
          [HttpGet]
-         public List<ToDoItem> GetToDoItems()
+         public List<ToDoItem> GetAll()
         {
             return _toDoRepository.GetToDoItems();
         }
 
         [HttpGet]
-        public ToDoItem GetToDoItemById(int id)
+        public ToDoItem GetById(Guid id)
         {
             return _toDoRepository.GetById(id);
         }
 
         [HttpPost]
-        public void CreateToDoItem(ToDoItem toDo)
+        public ToDoItem Create(ToDoItem item)
         {
-            _toDoRepository.CreateToDo(toDo);
+            _toDoRepository.CreateToDo(item);
+            return item;
         }
 
-        [HttpPost]
-        public void UpdateToDoItem(ToDoItem toDo)
+        [HttpPut]
+        public ToDoItem Update(ToDoItem item)
         {
-            _toDoRepository.Update(toDo);
+            _toDoRepository.Update(item);
+            return item;
         }
 
         [HttpDelete]
-        public void DeleteToDoItem(int id)
+        public IHttpActionResult Delete(Guid id)
         {
             _toDoRepository.Delete(id);
+            return Ok();
         }
     }
 }

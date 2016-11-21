@@ -1,4 +1,5 @@
 ﻿using AspNetToDoApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,8 +13,9 @@ namespace AspNetToDoApi
         {
             _toDoList = new List<ToDoItem>()
             {
-                new ToDoItem(1, "Feed the dog", "Remember to feed the dog", false),
-                new ToDoItem(2, "Watch Star Wars", "Remember to watch the new Star Wars movie", true)
+                new ToDoItem("Get groceries", "43.465187,-80.522372", false),
+                new ToDoItem("Walk the dog", "43.465187,-80.522372", false),
+                new ToDoItem("Take the car to the shop", "43.465187,-80.522372", false)
             };
         }
 
@@ -22,12 +24,14 @@ namespace AspNetToDoApi
             return _toDoList;
         }
 
-        public void CreateToDo(ToDoItem toDo)
+        public void CreateToDo(ToDoItem item)
         {
-            _toDoList.Add(toDo);
+            if (item.Id == Guid.Empty)
+                item.Id = Guid.NewGuid();
+            _toDoList.Add(item);
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             var toDo = _toDoList.FirstOrDefault(t => t.Id == id);
 
@@ -35,15 +39,15 @@ namespace AspNetToDoApi
                 _toDoList.Remove(toDo);
         }
 
-        public void Update(ToDoItem toDo)
+        public void Update(ToDoItem item)
         {
-            var toDoToUpdate = _toDoList.FirstOrDefault(t => t.Id == toDo.Id);
+            var toDoToUpdate = _toDoList.FirstOrDefault(t => t.Id == item.Id);
 
             if (toDoToUpdate != null)
-                toDoToUpdate.UpdateToDo(toDo);
+                toDoToUpdate.UpdateToDo(item);
         }
 
-        public ToDoItem GetById(int id)
+        public ToDoItem GetById(Guid id)
         {
             return _toDoList.FirstOrDefault(t => t.Id == id);
         }
