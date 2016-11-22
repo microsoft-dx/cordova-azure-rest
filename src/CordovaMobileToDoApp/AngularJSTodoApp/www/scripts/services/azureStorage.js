@@ -39,7 +39,7 @@
 
     function refreshList(thisArg) {
 
-        return this.httpClient.get(AZURE_API_ADDRESS + '/api/todo' + id)
+        return this.httpClient.get(AZURE_API_ADDRESS + '/api/todo/' + id)
             .then(function (items) {
                 var items = response.data;
                 console.log("refresh items:");
