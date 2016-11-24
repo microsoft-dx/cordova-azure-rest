@@ -9,19 +9,6 @@ Introduction
 > More on [the Official ASP .NET WebApi Documentation](https://www.asp.net/web-api)
 
 
-Creating an empty ASP .NET WebApi application
-----------------------------------------------
-
-First of all, let’s see how we create a WebApi solution from Visual Studio. We click New Project, then from Web we select ASP.NET Web Application, choose a name and then click Ok.
-
-![](https://media-www-asp.azureedge.net/media/4410043/getstarted01.png)
-
-Next, choose an Empty template from ASP.NET 4.x Templates, with WebApi folders included, with No Authentication and not Hosted in the Cloud. 
-
-![](https://media-www-asp.azureedge.net/media/4410055/getstarted02.png)
-
-Now we have a basic structure for implementing a web service that will help us Create, Read, Update and Delete ToDo items in our mobile applications.
-
 Cloning the GitHub repository
 -----------------------------
 
