@@ -62,5 +62,5 @@ To create the .NET backend and to test the mobile application, you will need  [V
 ----------------------------------
 For the Java backend, we will use [IntelliJ Idea from JetBrains](https://www.jetbrains.com/idea/) that also has a Community Edition. Then, we will deploy the application in the Cloud using the [Microsoft Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053).
 
-4. Google Chrome and the PostMan extension
+4. Google Chrome and the [PostMan extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 ------------------------------------------

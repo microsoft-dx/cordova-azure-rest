@@ -29,6 +29,8 @@ In this repository there are 2 braches: `master`, which contains the completed a
 
 Go to [the development branch of this repository](https://github.com/microsoft-dx/cordova-azure-rest/tree/development) and either clone it locally (if you are familiar with GitHub) or just download it as a ZIP file.
 
+> If you have [git-scm](https://git-scm.com/) installed or other source control management tools, you can use the following command: `git clone -b development https://github.com/microsoft-dx/cordova-azure-rest`.
+
 Then navigate to the `src/AspNetToDoApi/` folder and open `AspNetToDoApi.sln` file with Visual Studio 2015. This will open two projects, the .NET backend and the mobile application.
 
 ![](../media/solution-projects.png)
@@ -65,6 +67,57 @@ Creating the controller methods
 
 Your task is to create the appropriate controller methods required in order to Create, Read, Update and Delete to do items in the application. Remember to follow the REST standard and specify the HTTP method you want to use.
 
+This is how the ToDoController should look like
+
+```
+using AspNetToDoApi.DAL;
+using AspNetToDoApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Web.Http;
+
+namespace AspNetToDoApi.Controllers
+{
+    public class ToDoController : ApiController
+    {
+        private static ToDoRepository _toDoRepository = new ToDoRepository();
+        
+         [HttpGet]
+         public List<ToDoItem> GetAll()
+        {
+            return _toDoRepository.GetToDoItems();
+        }
+
+        [HttpGet]
+        public ToDoItem GetById(Guid id)
+        {
+            return _toDoRepository.GetById(id);
+        }
+
+        [HttpPost]
+        public ToDoItem Create(ToDoItem item)
+        {
+            _toDoRepository.CreateToDo(item);
+            return item;
+        }
+
+        [HttpPut]
+        public ToDoItem Update(ToDoItem item)
+        {
+            _toDoRepository.Update(item);
+            return item;
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(Guid id)
+        {
+            _toDoRepository.Delete(id);
+            return Ok();
+        }
+    }
+}
+```
+
 Testing the application locally
 -------------------------------
 
@@ -75,6 +128,10 @@ Now that you created the controller methods, it is time to test the application,
 - using [PostMan](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) - a Google Chrome extension that makes it easy to make HTTP requests.
 
 ![](../media/postman-local.png)
+
+We can also get just one item from the backend using the id:
+
+![](../media/postman-id.png)
 
 You can also execute POST, PUT or DELETE requests with the appropriate method and parameters.
 
@@ -88,11 +145,13 @@ You can see that the changes are persistant - you can modify with PostMan and ch
 Publishing the application to the Cloud - Azure
 ------------------------------------------------
 
-Assuming you created a Microsoft Azure account, we will deploy the backend we just created to the Cloud so our backend is public and not bound to localhost. To do this, right click the project and click publish.
+Assuming you created a Microsoft Azure account, we will deploy the backend we just created to the Cloud so our backend is public and not bound to `localhost`. To do this, right click the project and click publish.
 
 ![](../media/publish-right-click.png)
 
 Choose a name, resource group and service plan for your application and then publish your application.
+
+> [You can follow the steps in this article to better understand all the things involved in creating a new cloud resource.](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-dotnet-get-started#configure-azure-resources-for-a-new-web-app)
 
 > Note that if you chose `application-name` as the name of your application, you will be able to access it at `application-name.azurewebsites.net`.
 
