@@ -126,10 +126,53 @@ Then you need to sign in using your Microsoft Account.
 
 ![](../media/intellij-azure.png)
 
+- Enter a DNS Label for your Web App Container; this will form the leaf DNS label of the host URL for your web application in Azure. Note that the name must be available and conform to Azure Web App naming requirements.
+In the Web Container drop-down menu, select the appropriate software for your application.
+
+- Currently, you can choose from Tomcat 8, Tomcat 7 or Jetty 9. A recent distribution of the selected software will be provided by Azure, and it will run on a recent distribution of JDK 8 created by Oracle and provided by Azure.
+
+- In the Subscription drop-down menu, select the subscription you want to use for this deployment.
+In the Resource Group drop-down menu, select the Resource Group with which you want to associate your Web App. (Azure Resource Groups allow you to group related resources together so that, for example, they can be deleted together.)
+
+- You can select an existing Resource Group (if you have any) and skip to step g below, or use the following these steps to create a new Resource Group:
+
+- Click New. The New Resource Group dialog box will be displayed:
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/app-service-web-intellij-create-hello-world-web-app/12-new-resource-group.png)
+
+- In the the Name textbox, specify a name for your new Resource Group.
+- In the the Region drop-down menu, select the appropriate Azure data center location for your Resource Group.
+- Click OK.
+
+The App Service Plan drop-down menu lists the app service plans that are associated with the Resource Group that you selected. (An App Service Plan specifies information such as the location of your Web App, the pricing tier and the compute instance size. A single App Service Plan can be used for multiple Web Apps, which is why it is maintained separately from a specific Web App deployment.)
+
+You can select an existing App Service Plan (if you have any) and skip to step h below, or use the following these steps to create a new App Service Plan:
+
+Click New...
+The New App Service Plan dialog box will be displayed:
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/app-service-web-intellij-create-hello-world-web-app/13-new-app-service-plan.png)
+
+- In the the Name textbox, specify a name for your new App Service Plan.
+- In the the Location drop-down menu, select the appropriate Azure data center location for the plan.
+- In the the Pricing Tier drop-down menu, select the appropriate pricing for the plan. For testing purposes you can choose Free.
+- In the the Instance Size drop-down menu, select the appropriate instance size for the plan. For testing purposes you can choose Small.
+
+Once you have completed all of the above steps, the New Web App Container dialog box should resemble the following illustration:
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/app-service-web-intellij-create-hello-world-web-app/14-new-app-container.png)
+
+- Click OK to complete the creation of your new Web App container.
+
+Wait a few seconds for the list of the Web App containers to be refreshed, and your newly-created web app container should now be selected in the list.
+
+You are now ready to complete the initial deployment of your Web App to Azure; click OK to deploy your Java application to the selected Web App container. By default, your application will be deployed as a subdirectory of the application server.
+
 Then check the `Deploy to Root` option and click Ok:
 
 ![](../media/root.png)
 
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/app-service-web-intellij-create-hello-world-web-app/16-progress-indicator.png)
 Then, the it should deploy it and you should be able to access the URL (`application-name.azurewebsites.net`) and test your application.
 
 ![](../media/remote-java.png)
