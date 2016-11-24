@@ -23,7 +23,9 @@ Hands-on Workshop – REST Services in the Microsoft Azure Cloud – 2h15
 
 - [Lab Setup](/docs/setup/readme.md)
 
-- Hands-on Lab – REST services in Azure using [.NET](/docs/exercise01/readme.md) and [Java](/docs/exercise02/readme.md)
+- Hands-on Lab – REST services in Azure using .NET and Java:
+   - [Exercise 1 - .NET](/docs/exercise01/readme.md)  
+   - [Exercise 2 - Java](/docs/exercise02/readme.md)
 
 
 
