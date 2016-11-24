@@ -13,4 +13,4 @@ Creating an empty ASP .NET WebApi application
 
 First of all, let’s see how we create a WebApi solution from Visual Studio. We click New Project, then from Web we select ASP.NET Web Application, choose a name and then click Ok.
 
-![](./media/vs-new-webapi)
+![](../media/vs-new-webapi)
