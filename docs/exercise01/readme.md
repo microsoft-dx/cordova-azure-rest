@@ -168,4 +168,4 @@ Comment the line with `localhost`,  uncomment and add your own application url t
 
 > If you want to test a public and functional backend, you can use this URL - `http://aspnet-todo-api.azurewebsites.net/`
 
-The applicatin should run in the same way, just that now it makes requests to a public endpoint and not to `localhost`
+The application should run in the same way, just that now it makes requests to a public endpoint and not to `localhost`.
