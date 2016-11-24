@@ -16,7 +16,7 @@ First of all, let’s see how we create a WebApi solution from Visual Studio. We
 
 ![](https://media-www-asp.azureedge.net/media/4410043/getstarted01.png)
 
-Next, choose an Empty template from ASP.NET 4.6 Templates, with WebApi folders included, with No Authentication and not Hosted in the Cloud. 
+Next, choose an Empty template from ASP.NET 4.x Templates, with WebApi folders included, with No Authentication and not Hosted in the Cloud. 
 
 ![](https://media-www-asp.azureedge.net/media/4410055/getstarted02.png)
 
