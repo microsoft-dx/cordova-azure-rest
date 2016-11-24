@@ -9,7 +9,7 @@
 		// Generates a small part of a GUID
 		this.generatePart = function () {
 			var guidPartNumber = (Math.random() * 0x10000) | 0;
-			return (guidPartNumber + 0x10000).toString(16).substring(1).toUpperCase();
+			return (guidPartNumber + 0x10000).toString(16).substring(1).toLowerCase();
 		};
 	}
 
@@ -19,7 +19,6 @@
 	 */
 	GuidGenerator.prototype.get = function () {
 		return this.generatePart()
-			+ '-'
 			+ this.generatePart()
 			+ '-'
 			+ this.generatePart()
@@ -27,7 +26,9 @@
 			+ this.generatePart()
 			+ '-'
 			+ this.generatePart()
+            + '-'
 			+ this.generatePart()
+            + this.generatePart()
 			+ this.generatePart();
 	};
 })();
