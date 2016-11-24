@@ -6,11 +6,8 @@ namespace AspNetToDoApi.Models
     public class ToDoItem
     {
         public Guid Id { get; set; }
-
         public string Text { get; set; }
-
         public string Address { get; set; }
-
         public bool Done { get; set; }
 
         public ToDoItem()
