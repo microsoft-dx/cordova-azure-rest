@@ -5,7 +5,6 @@ Setup
 To follow this Hands-on-Lab, you will need the following:
 
  1. Microsoft Azure subscription
- 
  --------------------------------
 
 In order to create a free Azure Subscription, you can either use:
@@ -14,13 +13,15 @@ In order to create a free Azure Subscription, you can either use:
 - a [Microsoft Azure Pass](http://www.microsoftazurepass.com/) - provided you have received a code from Microsoft representatives or partners
 - a standard [Azure free trial](https://azure.microsoft.com/en-us/free/).
 
-## 1a. Sign up for Visual Studio Dev Essentials.
+1a. Sign up for Visual Studio Dev Essentials
+---------------------------------------------
 
 [Visual Studio Dev Essentials](https://azure.microsoft.com/en-gb/pricing/member-offers/vs-dev-essentials/) is a free bundle from Microsoft which offers developers the chance to experiment and learn with MS-ecosystem solutions like: Azure, Xamarin, Visual Studio, Visual Studio Team Services and so on.
 
 [Follow this tutorial](https://github.com/awesome-opening-opportunities/technical-documentation/blob/master/docs/vs-dev-essentials.md) to find out more about Visual Studio Dev Essentials.
 
-## 1b. Use a Microsoft Azure Pass
+1b. Use a Microsoft Azure Pass
+------------------------------
 
 By using a [Microsoft Azure Pass](http://www.microsoftazurepass.com/) code, you can create a free trial subscription without the need of a credit card.
 
