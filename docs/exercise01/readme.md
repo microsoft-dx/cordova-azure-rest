@@ -50,7 +50,7 @@ The best practice when working with a data store is to separate the logic of acc
 
 ![](../media/repository.png)
 
-For our web service, we keep the items in-memory. So, the place where we keep the data will be a list of items that we will query for getting all items, getting an item by id, adding, removing and updating a item. 
+For our web service, we keep the items in-memory. So, the place where we keep the data will be a list of items that we will query for getting all items, getting an item by id, adding, removing and updating an item. 
  
 Then, wherever we want to access our stored to do items, we just have a ToDoRepository property and call the appropriate method. 
 
