@@ -19,16 +19,16 @@
 	 */
 	GuidGenerator.prototype.get = function () {
 		return this.generatePart()
-			+ this.generatePart()
-			+ '-'
-			+ this.generatePart()
-			+ '-'
-			+ this.generatePart()
-			+ '-'
-			+ this.generatePart()
-            + '-'
-			+ this.generatePart()
             + this.generatePart()
-			+ this.generatePart();
+            + '-'
+            + this.generatePart()
+            + '-'
+            + this.generatePart()
+            + '-'
+            + this.generatePart()
+            + '-'
+            + this.generatePart()
+            + this.generatePart()
+            + this.generatePart();
 	};
 })();
