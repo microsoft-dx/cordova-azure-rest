@@ -5,7 +5,7 @@ Setup
 To follow this Hands-on-Lab, you will need the following:
 
  1. Microsoft Azure subscription
- --------------------------------
+ -------------------------------
 
 In order to create a free Azure Subscription, you can either use:
 
@@ -61,3 +61,6 @@ To create the .NET backend and to test the mobile application, you will need  [V
 3. Intellij Idea Community Edition
 ----------------------------------
 For the Java backend, we will use [IntelliJ Idea from JetBrains](https://www.jetbrains.com/idea/) that also has a Community Edition. Then, we will deploy the application in the Cloud using the [Microsoft Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053).
+
+4. Google Chrome and the PostMan extension
+------------------------------------------
