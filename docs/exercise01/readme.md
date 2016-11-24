@@ -155,6 +155,36 @@ Choose a name, resource group and service plan for your application and then pub
 
 > Note that if you chose `application-name` as the name of your application, you will be able to access it at `application-name.azurewebsites.net`.
 
+- In the Create App Service dialog, click Add an account, and then sign in to Azure with the ID and password of the account that you use to manage your Azure subscription.
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/configuresitesettings.png)
+
+- Enter a Web App Name that is unique in the azurewebsites.net domain. For example, you can name it MyExample with numbers to the right to make it unique, such as MyExample810. If a default web name is created for you, it will be unique and you can use that.
+
+- If someone else has already used the name that you enter, you see a red exclamation mark to the right instead of a green check mark, and you have to enter a different name.
+
+- Click the New button next to the Resource Group box, and then enter "MyExample" or another name if you prefer.
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/rgcreate.png)
+
+> A resource group is a collection of Azure resources such as web apps, databases, and VMs. For a tutorial, it's generally best to create a new resource group because that makes it easy to delete in one step any Azure resources that you create for the tutorial. For more information, [see Azure Resource Manager overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
+
+- Click the New button next to the App Service Plan drop-down.
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/createasplan.png)
+
+- The Configure App Service Plan dialog appears.
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/configasp.png)
+
+- In the Configure App Service Plan dialog, enter "MyExamplePlan" or another name if you prefer.
+- In the Location drop-down list, choose the location that is closest to you.
+
+- In the Size drop-down, click Free.
+
+- In the Configure App Service Plan dialog, click OK.
+- In the Create App Service dialog box, click Create.
+
 At this point you can test the application in the same way with the browser and with PostMan, just by changing the URL from `localhost` to `application-name.azurewebsites.net`
 
 In order to test the mobile application, we need to make a change in the code: in `AngularJsTodoApp/www/scripts/services`, open the `azureStorage.js` file and locate:
