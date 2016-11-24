@@ -5,6 +5,7 @@ Setup
 To follow this Hands-on-Lab, you will need the following:
 
  1. Microsoft Azure subscription
+ 
  --------------------------------
 
 In order to create a free Azure Subscription, you can either use:
