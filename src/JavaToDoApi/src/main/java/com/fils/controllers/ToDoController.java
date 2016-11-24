@@ -18,19 +18,19 @@ public class ToDoController {
 
     private ToDoRepository _todoRepository = new ToDoRepository();
 
-    @RequestMapping(value = "/toDo", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/todo", method = RequestMethod.GET)
     @CrossOrigin
     public List<ToDoItem> getAll(){
         return _todoRepository.getToDoItems();
     }
 
-    @RequestMapping(value = "/toDo/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/todo/{id}", method = RequestMethod.GET)
     @CrossOrigin
     public ToDoItem getById(@PathVariable("id") UUID id){
         return _todoRepository.getById(id);
     }
 
-    @RequestMapping(value = "/toDo", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/todo", method = RequestMethod.POST)
     @CrossOrigin
     public ToDoItem create(@RequestBody ToDoItem item){
         _todoRepository.createToDoItem(item);
@@ -38,7 +38,7 @@ public class ToDoController {
         return item;
     }
 
-    @RequestMapping(value = "/toDo", method = RequestMethod.PUT)
+    @RequestMapping(value = "/api/todo", method = RequestMethod.PUT)
     @CrossOrigin
     public ToDoItem update(@RequestBody ToDoItem item){
         _todoRepository.updateToDoItem(item);
@@ -46,7 +46,7 @@ public class ToDoController {
         return item;
     }
 
-    @RequestMapping(value = "/toDo/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/toDo/{id}", method = RequestMethod.DELETE)
     @CrossOrigin
     public ResponseEntity<HttpStatus> delete(@PathVariable UUID id){
         _todoRepository.deleteToDoItem(id);
