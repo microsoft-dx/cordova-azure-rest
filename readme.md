@@ -21,9 +21,9 @@ Hands-on Workshop – REST Services in the Microsoft Azure Cloud – 2h15
 
 - Intro – Web Services, SOAP vs REST
 
-- Lab Setup
+- [Lab Setup](/docs/setup/readme.md)
 
-- Hands-on Lab – REST services in Azure using .NET and Java
+- Hands-on Lab – REST services in Azure using [.NET](/docs/exercise01/readme.md) and [Java](/docs/exercise02/readme.md)
 
 
 
