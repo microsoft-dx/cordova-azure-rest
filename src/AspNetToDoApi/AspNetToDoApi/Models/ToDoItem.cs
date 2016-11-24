@@ -5,16 +5,12 @@ namespace AspNetToDoApi.Models
 {
     public class ToDoItem
     {
-        [JsonProperty("id")]
         public Guid Id { get; set; }
 
-        [JsonProperty("text")]
         public string Text { get; set; }
 
-        [JsonProperty("address")]
         public string Address { get; set; }
 
-        [JsonProperty("done")]
         public bool Done { get; set; }
 
         public ToDoItem()
