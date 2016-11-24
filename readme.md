@@ -5,16 +5,24 @@ Agenda
 ------
 
 1.       Cloud Computing and why it’s changing technology - 1h30
+
     a.       Why Cloud?
+
     b.       Paradigms and best practices for building solutions in the cloud
+
     c.       Microsoft Azure Cloud overview
+
  
 Break – 15min
  
 2.       Hands-on Workshop – REST Services in the Microsoft Azure Cloud – 2h15
+
     a.       Intro – Web Services, SOAP vs REST
+
     b.       Lab Setup
+
     c.       Hands-on Lab – REST services in Azure using .NET and Java
+    
 
 
 Prerequisites
