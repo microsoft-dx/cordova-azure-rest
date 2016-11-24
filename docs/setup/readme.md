@@ -56,4 +56,6 @@ Navigate to the [Azure portal](https://azure.microsoft.com/en-us/free/) and foll
 
 To create the .NET backend and to test the mobile application, you will need  [Visual Studio Community 2015](https://www.visualstudio.com/vs/community/) and the [Apache Cordova Tools](https://taco.visualstudio.com/) for the mobile application.
 
-3. For the Java backend, we will use [IntelliJ Idea from JetBrains](https://www.jetbrains.com/idea/) that also has a Community Edition. Then, we will deploy the application in the Cloud using the [Microsoft Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053).
+3. Intellij Idea Community Edition
+----------------------------------
+For the Java backend, we will use [IntelliJ Idea from JetBrains](https://www.jetbrains.com/idea/) that also has a Community Edition. Then, we will deploy the application in the Cloud using the [Microsoft Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053).
