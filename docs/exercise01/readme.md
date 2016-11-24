@@ -142,6 +142,10 @@ You can also execute POST, PUT or DELETE requests with the appropriate method an
 The application is fully functional, you can add items, mark them as completed or delete them.
 You can see that the changes are persistant - you can modify with PostMan and check in the application or the other way around.
 
+If you press F12 in the browser and go to the Network tab and make a request (like add a new item), you can see the emulator making requests to the backend we created:
+
+![](../media/developer-tools-local.png)
+
 Publishing the application to the Cloud - Azure
 ------------------------------------------------
 
@@ -185,6 +189,16 @@ Choose a name, resource group and service plan for your application and then pub
 - In the Configure App Service Plan dialog, click OK.
 - In the Create App Service dialog box, click Create.
 
+Then, the Publish dialog appears with an overview of what you completed so far:
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/gs13validateconnection.png)
+
+You have the opportunity to configure connection strings for databases and other configurations, or you can press Publish.
+
+![](https://docs.microsoft.com/en-us/azure/app-service-web/media/web-sites-dotnet-get-started/gs13settingstab.png)
+
+Visual Studio will begin deploying the application to Azure and will open a new browser tab once it completes.
+
 At this point you can test the application in the same way with the browser and with PostMan, just by changing the URL from `localhost` to `application-name.azurewebsites.net`
 
 In order to test the mobile application, we need to make a change in the code: in `AngularJsTodoApp/www/scripts/services`, open the `azureStorage.js` file and locate:
@@ -199,3 +213,7 @@ Comment the line with `localhost`,  uncomment and add your own application url t
 > If you want to test a public and functional backend, you can use this URL - `http://aspnet-todo-api.azurewebsites.net/`
 
 The application should run in the same way, just that now it makes requests to a public endpoint and not to `localhost`.
+
+Remember earlier when we tested the application locally and we saw the request made to `localhost`. If we do the same thing now, we should see a request going to `application-name.azurewebsites.net`:
+
+![](../media/developer-tools-remote.png)
